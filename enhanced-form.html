@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Week 2 Assignment">
+        <meta name="keywords" content="HTML, Assignment, Week 2">
+        <meta name="author" content="Garcia Damião">
+        <title>Assignment - Week 2</title>
+    </head>
+    <body>
+        <h1>Assignment - List, Table, Midia and Form.</h1>
+        <h2>Lists</h2>
+    
+        <!-- ===== LISTS ===== -->
+        <!-- Description list: term (DT) and definition (DD) -->
+        <h3>Computer</h3>
+        <dl>
+            <dt>CPU</dt>
+            <dd>Central Processing Unit</dd>
+            <dt>RAM</dt>
+            <dd>Random Access Memory</dd>
+            <dt>HDD</dt>
+            <dd>Hard Disk Drive</dd>
+        </dl>
+
+        <!-- Ordered list with nested sublists -->
+        <h3>Smartfone</h3>
+        <ol>
+            <li>Apple
+                <!-- Nested ordered list using Roman numerals -->
+                <ol type="I">
+                    <li>iPhone 13</li>
+                    <li>iPhone 14</li>
+                    <li>iPhone 15</li>
+                </ol>
+            </li>
+            <li>Samsung
+                <!-- Nested unordered list -->
+                <ul type="square">
+                    <li>Galaxy S21</li>
+                    <li>Galaxy S22</li>
+                    <li>Galaxy S23</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <!-- ===== TABLE ===== -->
+        <h2>Table</h2>
+        <table border="1">
+            <caption>Programming Course</caption>
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Duration</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML Basics</td>
+                    <td>4 weeks</td>
+                    <td>Eric Mori</td>
+                </tr>
+                <tr>
+                    <td>CSS Fundamentals</td>
+                    <td>6 weeks</td>
+                    <td>Eddie Lugai</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Essentials</td>
+                    <td>8 weeks</td>
+                    <td>Evans Muku</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ===== MEDIA ===== -->
+        <h2>Media</h2>
+        <!-- Image -->
+        <h3>Image</h3>
+        <img src="https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg" alt="HTML code" width="500" height="300">
+        
+        <!-- Audio -->
+        <h3>Audio</h3>
+
+        <!-- Audio player with fallback text -->
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Your browser does not support the audio playback.
+        </audio>
+
+        <!-- Video with autoplay, muted and fallback text -->
+        <h3>Video</h3>
+        <video width="500" height="300" controls autoplay muted>
+            <source src="https://videos.pexels.com/video-files/7660485/7660485-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            Your browser does not support the video playback.
+        </video>
+
+        <!-- ===== FORM ===== -->
+        <h2>Forms</h2>
+        <form action="https://example.com/submit" method="post">
+            <!-- Fixed student ID (readonly: visible but not editable) -->
+            <label for="id">Student ID:</label>
+            <input type="text" id="id" name="id" value="2025-001" readonly>
+            <br><br>
+            
+            <!-- Required name field -->
+            <label for="name" >Name:</label>
+            <input type="text" id="name" name="name" placeholder="Write your name" autocomplete="on" required>
+            <br><br> 
+
+            <!-- Required email field with automatic validation -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="on" required>
+            <br><br>
+
+            <!-- Single choice options (radio buttons) for gender -->
+            <label for="gender">Gender:</label>
+            <label></label><input type="radio" id="male" name="gender" value="male">Male</label>
+            <label><input type="radio" id="female" name="gender" value="female">Female</label>
+            <br><br> 
+            
+            <!-- Dropdown menu for course selection (required) -->
+            <label for="course">Course Name:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>--Select course--</option>
+                <option value="html">HTML Basics</option>
+                <option value="css">CSS Fundamentals</option>
+                <option value="js">JavaScript Essentials</option>
+            </select>
+            <br><br> 
+            
+            <!-- Text area for user message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" minlength="5" placeholder="Enter your message here..."></textarea>
+            <br><br>       
+            
+            <!-- Submit button to send form data -->
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
